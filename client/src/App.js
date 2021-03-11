@@ -2,9 +2,10 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import {Switch, Route, useHistory} from 'react-router-dom';
 import { Layout } from './layouts/Layout';
-import { Login } from './screens/Login';
+import { Login } from './screens/login/Login';
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
-import { Register } from './screens/Register';
+import { Register } from './screens/register/Register';
+import { MainContainer } from './container/MainContainer';
 
 
 
@@ -61,7 +62,7 @@ function App() {
         </Route>
 
         <Route path='/'>
-          <h3>Home</h3>
+          <MainContainer />
         </Route>
 
 

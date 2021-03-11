@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+button{
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    
+}
