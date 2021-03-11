@@ -16,8 +16,16 @@ User.destroy_all
 
 puts "#{User.count} users created"
 
-@george = Driver.create!(img_url: " https://images.unsplash.com/photo-1598966739654-5e9a252d8c32?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNlbGZpZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "george mayweather", company: "Uber", user: @logan)
-@amanda = Driver.create!(img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNlbGZpZSUyMHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 ", name: "amanda mcdonald", company: "Uber", user: @dame)
+@george = Driver.create!(img_url: " https://images.unsplash.com/photo-1598966739654-5e9a252d8c32?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNlbGZpZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "George Mayweather", company: "Uber", user: @logan)
+@amanda = Driver.create!(img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNlbGZpZSUyMHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 ", name: "Amanda Mcdonald", company: "Uber", user: @dame)
+@brian = Driver.create!(img_url: "", name: "Bryan Hutchinson", company: "Lyft", user: @ainsley)
+@alan = Driver.create!(img_url: "", name: "Alan Greenspan", company: "Uber", user: @james)
+@jerome = Driver.create!(img_url: "", name: "Jerome Bailey", company: "Lyft", user: @alogan)
+@kenrick = Driver.create!(img_url: "", name: "Kenrick Stewart", company: "Uber", user: @dame)
+@omar = Driver.create!(img_url: "", name: "Omar Ralph", company: "Lyft", user: @james)
+@chez = Driver.create!(img_url: "", name: "Chez Powell", company: "Lyft", user: @james)
+@terrence = Driver.create!(img_url: "", name: "Terrence Lewis", company: "Uber", user: @ainsley)
+@emiel = Driver.create!(img_url: "", name: "Emiel Cruz", company: "Lyft", user: @dame)
 
 puts "#{Driver.count} drivers created"
 

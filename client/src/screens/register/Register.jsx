@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
-
+import "./Register.css";
 
 export const Register = (props) => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
-    password: ""
+    password: "",
   });
   const { username, email, password } = formData;
-  const { handleRegister } = props
+  const { handleRegister } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,39 +20,51 @@ export const Register = (props) => {
   };
 
   return (
-    <form onSubmit={(e) => {
+    <div className='background'>
+    <form
+      onSubmit={(e) => {
         e.preventDefault();
-        handleRegister(formData)
-    }}>
+        handleRegister(formData);
+      }}
+    >
+      <div className="username input-container">
         <h3>Register</h3>
-      <label>
-          Username:
-        <input
-          type="text"
-          name="username"
-          value={username}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-          Email:
-        <input
-          type="text"
-          name="email"
-          value={email}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Password:
-      <input
-        type="password"
-        name="password"
-        value={password}
-        onChange={handleChange}
-        />
-        </label>
-      <button>Register</button>
+        
+          <input
+          placeholder="username"
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleChange}
+          />
+        
+      </div>
+      <div className="email input-container">
+        
+          <input
+            placeholder="email"
+            type="text"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+        
+      </div>
+      <div className="password input-container">
+        
+          <input
+            placeholder="Enter password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+        
+      </div>
+      <div className="button-container">
+        <button className="register-button">Register</button>
+      </div>
     </form>
+    </div>
   );
 };
