@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import { CreateReview } from '../screens/createreview/CreateReview';
 import { Driver } from '../screens/driver/Driver';
 import { DriverDetails } from '../screens/driverdetails/DriverDetails';
+import { EditReview } from '../screens/editReview/EditReview';
 import { getAllDrivers } from '../services/drivers';
 
 
@@ -10,15 +11,22 @@ export const MainContainer = () => {
     const[drivers, setDrivers ] = useState([]);
 
     useEffect(() => {
-        const fetchDrivers = async() =>{
+        const fetchDrivers = async () =>{
             const driverData = await getAllDrivers()
             setDrivers(driverData)
         }
         fetchDrivers()
     }, [])
+
     
     return (
         <Switch>
+            <Route path='/drivers/:id/review-edit'> 
+             <EditReview />
+            
+            </Route>
+
+
             <Route path='/drivers/:id/review-create'>
                 <CreateReview />
                 
