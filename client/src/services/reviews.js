@@ -16,11 +16,11 @@ export const postReview = async (reviewData) =>{
 }
 
 export const putReview = async (id, reviewData) => {
-    const resp = await api.put(`/reviews/${id}`, {review, reviewData});
+    const resp = await api.put(`/reviews/${id}`, {review: reviewData});
     return resp.data;
 }
 
-export const destroyReview = async () => {
-    const resp = await api.destroy(`/reviews/${id}`)
+export const destroyReview = async (id) => {
+    const resp = await api.delete(`/reviews/${id}`)
     return resp;
 }
