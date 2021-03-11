@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Driver.destroy_all
 Review.destroy_all
+Driver.destroy_all
 User.destroy_all
 
-@dame = User.create!(username: "dame", email: "dame@email.com", password_digest: '123456')
-@james = User.create!(username: "james", email: "james@email.com", password_digest: '123456')
-@ainsley = User.create!(username: "ainsley", email: "ainsley@email.com", password_digest: '123456')
-@logan = User.create!(username: "logan", email: "logan@email.com", password_digest: '123456')
+@dame = User.create!(username: "dame", email: "dame@email.com", password: '123456')
+@james = User.create!(username: "james", email: "james@email.com", password: '123456')
+@ainsley = User.create!(username: "ainsley", email: "ainsley@email.com", password: '123456')
+@logan = User.create!(username: "logan", email: "logan@email.com", password: '123456')
 
 puts "#{User.count} users created"
 

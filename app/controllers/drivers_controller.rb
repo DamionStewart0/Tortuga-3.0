@@ -10,7 +10,7 @@ class DriversController < ApplicationController
 
   # GET /drivers/1
   def show
-    render json: @driver
+    render json: @driver, include: :reviews
   end
 
   # POST /drivers
