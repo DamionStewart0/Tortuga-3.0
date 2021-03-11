@@ -28,35 +28,36 @@ export const Login = (props) => {
       }}
     >
         <div className="input-container">
+        <h3>Login</h3>
           <div className="username-container">
-            <h3>Login</h3>
-            <label>
-              Username:
+            
+            
               <input
+              placeholder="username"
                 type="text"
                 name="username"
                 value={username}
                 onChange={handleChange}
               />
-            </label>
+            
           </div>
           <div className="password-container">
-            <label>
-              Password:
+            
               <input
+              placeholder="password"
                 type="password"
                 name="password"
                 value={password}
                 onChange={handleChange}
               />
-            </label>
+            
           </div>
           <Link to="/register">
             <p>Register for an account</p>
           </Link>
         </div>
         <div className="button-container">
-          <button>Submit</button>
+          <button className='login-button'>Submit</button>
         </div>
       </form>
     </div>
