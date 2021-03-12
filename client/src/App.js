@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import {Switch, Route, useHistory} from 'react-router-dom';
-import { Layout } from './layouts/Layout';
+import { Layout } from './components/shared/layouts/Layout';
 import { Login } from './screens/login/Login';
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 import { Register } from './screens/register/Register';
@@ -47,7 +47,7 @@ function App() {
 
   }
   return (
-    <Layout>
+    
       <Switch>
       <Route path='/review'>
           <h3>Enter</h3>
@@ -67,7 +67,7 @@ function App() {
 
 
       </Switch>
-    </Layout>
+    
   );
 }
 
