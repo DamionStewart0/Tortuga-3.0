@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Review.destroy_all
-Driver.destroy_all
 User.destroy_all
+Driver.destroy_all
 
 @dame = User.create!(username: "dame", email: "dame@email.com", password: '123456')
 @james = User.create!(username: "james", email: "james@email.com", password: '123456')
@@ -18,14 +18,14 @@ puts "#{User.count} users created"
 
 @george = Driver.create!(img_url: " https://images.unsplash.com/photo-1598966739654-5e9a252d8c32?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNlbGZpZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "George Mayweather", company: "Uber", user: @logan)
 @amanda = Driver.create!(img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNlbGZpZSUyMHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 ", name: "Amanda Mcdonald", company: "Uber", user: @dame)
-@brian = Driver.create!(img_url: "", name: "Bryan Hutchinson", company: "Lyft", user: @ainsley)
-@alan = Driver.create!(img_url: "", name: "Alan Greenspan", company: "Uber", user: @james)
-@jerome = Driver.create!(img_url: "", name: "Jerome Bailey", company: "Lyft", user: @alogan)
-@kenrick = Driver.create!(img_url: "", name: "Kenrick Stewart", company: "Uber", user: @dame)
-@omar = Driver.create!(img_url: "", name: "Omar Ralph", company: "Lyft", user: @james)
-@chez = Driver.create!(img_url: "", name: "Chez Powell", company: "Lyft", user: @james)
-@terrence = Driver.create!(img_url: "", name: "Terrence Lewis", company: "Uber", user: @ainsley)
-@emiel = Driver.create!(img_url: "", name: "Emiel Cruz", company: "Lyft", user: @dame)
+@brian = Driver.create!(img_url: "https://images.unsplash.com/photo-1471015060382-6cbd8b4e34d0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Bryan Hutchinson", company: "Lyft", user: @ainsley)
+@alan = Driver.create!(img_url: "https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bWFsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Alan Greenspan", company: "Uber", user: @james)
+@jerome = Driver.create!(img_url: "https://images.unsplash.com/photo-1542190891-2093d38760f2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Jerome Bailey", company: "Lyft", user: @alogan)
+@kenrick = Driver.create!(img_url: "https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Kenrick Stewart", company: "Uber", user: @dame)
+@omar = Driver.create!(img_url: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Omar Ralph", company: "Lyft", user: @james)
+@chez = Driver.create!(img_url: "https://images.unsplash.com/photo-1524538198441-241ff79d153b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Chez Powell", company: "Lyft", user: @james)
+@terrence = Driver.create!(img_url: "https://images.unsplash.com/photo-1598628340414-bbf4c9e21604?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Terrence Lewis", company: "Uber", user: @ainsley)
+@emiel = Driver.create!(img_url: "https://images.unsplash.com/photo-1494389945381-0fe114b8ea4b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODh8fG1hbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", name: "Emiel Cruz", company: "Lyft", user: @dame)
 
 puts "#{Driver.count} drivers created"
 
@@ -37,5 +37,10 @@ Review.create!(comment: "Very professional and polight. Car was clean, water and
 Review.create!(comment: "Very professional and polight. Car was clean, water and candies were also provided",  stars: 4, driver: @amanda, user: @ainsley)
 Review.create!(comment: "Very professional and polight. Car was clean, water and candies were also provided",  stars: 5, driver: @george, user: @james)
 Review.create!(comment: "Very professional and polight. Car was clean, water and candies were also provided",  stars: 4, driver: @amanda, user: @james)
+Review.create!(comment: "Late but very nice and professional", stars: 3, driver: @brian, user: @dame)
+Review.create!(comment: "Late but very nice and professional", stars: 3, driver: @alan, user: @james)
+Review.create!(comment: "Late but very nice and professional", stars: 3, driver: @jerome, user: @ainsley)
+Review.create!(comment: "Late but very nice and professional", stars: 3, driver: @kenrick, user: @logan)
+
 
 puts "#{Review.count} reviews created"

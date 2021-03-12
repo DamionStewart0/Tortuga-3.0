@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {Switch, Route} from 'react-router-dom';
+import { Footer } from '../footer/Footer';
 import { CreateReview } from '../screens/createreview/CreateReview';
 import { Driver } from '../screens/driver/Driver';
 import { DriverDetails } from '../screens/driverdetails/DriverDetails';
@@ -39,6 +40,7 @@ export const MainContainer = () => {
 
             <Route path='/'>
                 <Driver drivers={drivers}/>
+                <Footer />
             </Route>
         </Switch>
     )

@@ -33,7 +33,7 @@ export const Login = (props) => {
             
             
               <input
-              placeholder="username"
+                placeholder="username"
                 type="text"
                 name="username"
                 value={username}
@@ -44,7 +44,7 @@ export const Login = (props) => {
           <div className="password-container">
             
               <input
-              placeholder="password"
+                placeholder="password"
                 type="password"
                 name="password"
                 value={password}

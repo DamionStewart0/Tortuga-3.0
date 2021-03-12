@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { postReview } from '../../services/reviews';
 import {useParams, useHistory} from 'react-router-dom';
 
-export const CreateReview = () => {
+export const CreateReview = (props) => {
 
     const [formData, setFormData]  = useState({
         comment:'',
