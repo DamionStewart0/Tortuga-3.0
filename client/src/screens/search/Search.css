@@ -1,0 +1,22 @@
+.search-form {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-input {
+    width: 50vw;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    padding: 12px 20px 12px 40px;
+    margin: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .search-input::placeholder {
+    letter-spacing: 0.3px;
+  }
+  

@@ -6,10 +6,13 @@
     justify-content: center;
     
 }
+.container {
+    min-height: 100vh;
+}
 
 .background {
     display: flex;
-    background: rgb(204, 204, 230);
+    /* background: rgb(204, 204, 230); */
     height: 400px;
     width: 350px;
     margin-left: 500px;

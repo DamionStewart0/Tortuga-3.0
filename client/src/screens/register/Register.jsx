@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Layout } from "../../components/shared/layouts/Layout";
 import "./Register.css";
 
 export const Register = (props) => {
@@ -20,22 +21,25 @@ export const Register = (props) => {
   };
 
   return (
+    <Layout>
+      <div className='container'>
+
     <div className='background'>
     <form
       onSubmit={(e) => {
         e.preventDefault();
         handleRegister(formData);
       }}
-    >
+      >
       <div className="username input-container">
         <h3>Register</h3>
         
           <input
           placeholder="username"
-            type="text"
-            name="username"
-            value={username}
-            onChange={handleChange}
+          type="text"
+          name="username"
+          value={username}
+          onChange={handleChange}
           />
         
       </div>
@@ -47,7 +51,7 @@ export const Register = (props) => {
             name="email"
             value={email}
             onChange={handleChange}
-          />
+            />
         
       </div>
       <div className="password input-container">
@@ -58,7 +62,7 @@ export const Register = (props) => {
             name="password"
             value={password}
             onChange={handleChange}
-          />
+            />
         
       </div>
       <div className="button-container">
@@ -66,5 +70,7 @@ export const Register = (props) => {
       </div>
     </form>
     </div>
+            </div>
+            </Layout>
   );
 };

@@ -39,7 +39,7 @@ export const Driver = (props) => {
         ))}
         <br />
       </div>
-      <div className="background-driver-create">
+      {/* <div className="background-driver-create">
         <div className="create-driver">
           <form className="create-form"
              onSubmit={(e) => {
@@ -75,14 +75,14 @@ export const Driver = (props) => {
                 onChange={handleChange}
               />
             </div>
-          </form>
-          <div className="create-button-container">
+          </form> */}
+          {/* <div className="create-button-container">
             <Link to="/driver/new">
               <button className="create-button">Create</button>
             </Link>
-          </div>
+          </div> */}
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 };
