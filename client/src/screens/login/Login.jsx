@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Layout } from "../../components/shared/layouts/Layout";
 import "./Login.css";
 
 export const Login = (props) => {
@@ -20,13 +21,17 @@ export const Login = (props) => {
   };
 
   return (
+    <Layout>
+
+    <div className='container'>
+
     <div className="background">
     <form
       onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}
-    >
+      >
         <div className="input-container">
         <h3>Login</h3>
           <div className="username-container">
@@ -38,7 +43,7 @@ export const Login = (props) => {
                 name="username"
                 value={username}
                 onChange={handleChange}
-              />
+                />
             
           </div>
           <div className="password-container">
@@ -49,7 +54,7 @@ export const Login = (props) => {
                 name="password"
                 value={password}
                 onChange={handleChange}
-              />
+                />
             
           </div>
           <Link to="/register">
@@ -61,5 +66,7 @@ export const Login = (props) => {
         </div>
       </form>
     </div>
+  </div>
+</Layout>
   );
 };

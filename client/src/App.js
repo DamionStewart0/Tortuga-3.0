@@ -1,23 +1,25 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import {Switch, Route, useHistory} from 'react-router-dom';
-import { Layout } from './components/shared/layouts/Layout';
 import { Login } from './screens/login/Login';
+import { Logout } from './screens/logout/Logout'
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 import { Register } from './screens/register/Register';
 import { MainContainer } from './container/MainContainer';
+import { About } from './screens/about/About';
 
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [error, setError] = useState(null)
+  const clearCurrentUser = () => setCurrentUser(null)
   const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
       const currentUser = await verifyUser();
-      setCurrentUser(currentUser);
+      currentUser ? setCurrentUser(currentUser): setCurrentUser(null)
     }
     handleVerify();
   }, [])
@@ -54,15 +56,22 @@ function App() {
         </Route>
 
         <Route path='/login'>
-          <Login  handleLogin={handleLogin}/>
+          <Login  handleLogin={handleLogin} currentUser={currentUser}/>
         </Route>
 
         <Route path='/register'>
-          <Register handleRegister={handleRegister} />
+          <Register handleRegister={handleRegister} currentUser={currentUser}/>
         </Route>
 
+        <Route path='/logout'>
+          <Logout setCurrentUser={setCurrentUser} clearCurrentUser={clearCurrentUser} />
+        </Route>
+
+        <Route path='/about'>
+          <About currentUser={currentUser} />
+        </Route>
         <Route path='/'>
-          <MainContainer />
+          <MainContainer currentUser={currentUser} />
         </Route>
 
 

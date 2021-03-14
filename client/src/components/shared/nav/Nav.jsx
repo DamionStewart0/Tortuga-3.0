@@ -5,7 +5,7 @@ import "./Nav.css";
 
 
 
-export const Nav = ({ user }) => {
+export const Nav = ({ currentUser }) => {
     const [isClicked, setIsClicked] = useState(false);
     const [dropdown, setDropdown] = useState(false);
 
@@ -55,7 +55,7 @@ export const Nav = ({ user }) => {
 
 
             <li className="nav-item nav-hover ">
-            <NavLink to='/register'
+            <NavLink to='/about'
              className='nav-link'
              className="nav-links"
              onClick={closeMobileMenu}>
@@ -63,15 +63,15 @@ export const Nav = ({ user }) => {
             </NavLink>
             </li>
 
-            {user && manageReviews}
+            {currentUser && manageReviews}
 
             <li className="nav-item">
             <NavLink
-                to={user ? "/register" : "/login"}   
+                to={currentUser ? "/logout" : "/login"}   
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
              >
-              {user ? "Logout" : "Login"}
+              {currentUser ? "Logout" : "Login"}
           </NavLink>
           </li>
           </ul>
@@ -82,9 +82,9 @@ export const Nav = ({ user }) => {
           onMouseLeave={onMouseLeave}
           >
           <NavLink to="#" className="nav-links" onClick={closeMobileMenu}>
-            {user ? "Profile " : "Login "}
+            {currentUser ? "Profile " : "Login "}
           </NavLink>
-          {dropdown && <Dropdown user={user} />}
+          {dropdown && <Dropdown currentUser={currentUser} />}
         </li>
         </nav>
             
